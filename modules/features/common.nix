@@ -12,6 +12,7 @@
     fzf
     git
     htop
+    libqalculate
     ripgrep
     tree
     wget
