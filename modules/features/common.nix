@@ -13,6 +13,7 @@
     git
     htop
     libqalculate
+    pstree
     ripgrep
     tree
     wget
