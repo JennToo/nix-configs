@@ -2,7 +2,7 @@
 {
   imports =
     [
-      ../../../hardware-configuration.nix
+      ../hardware-configurations/desktop-vm.nix
 
       ../features/common.nix
       ../features/gui-common.nix
