@@ -113,6 +113,31 @@
           })
 
           local lspconfig = require('lspconfig')
+          local cmp = require('cmp')
+
+          cmp.setup({
+              snippet = {
+                expand = function(args)
+                  vim.fn["vsnip#anonymous"](args.body)
+                end,
+              },
+              window = {},
+              mapping = cmp.mapping.preset.insert({
+                  ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+                  ['<C-f>'] = cmp.mapping.scroll_docs(4),
+                  ['<C-Space>'] = cmp.mapping.complete(),
+                  ['<C-e>'] = cmp.mapping.abort(),
+                  ['<CR>'] = cmp.mapping.confirm({ select = true }),
+              }),
+              sources = cmp.config.sources({
+                  { name = 'nvim_lsp' },
+                  { name = 'buffer' },
+                  { name = 'path' },
+                  { name = 'tmux' },
+              }, {
+                  { name = 'vsnip' },
+              })
+          })
 
           local opts = { noremap=true, silent=true }
           vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
@@ -122,8 +147,11 @@
           vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
 
           local servers = { 'clangd', 'rust_analyzer', 'pyright', 'hls' }
+          local capabilities = require('cmp_nvim_lsp').default_capabilities()
           for _, lsp in ipairs(servers) do
-            -- lspconfig[lsp].setup(require('coq').lsp_ensure_capabilities({}))
+            lspconfig[lsp].setup {
+                capabilities = capabilities
+            }
           end
 
           vim.cmd [[highlight IndentBlanklineIndent1 guibg=#E4EEEE gui=nocombine]]
@@ -160,6 +188,14 @@
             fzf-vim
             indent-blankline-nvim
             rose-pine
+            cmp-nvim-lsp
+            cmp-buffer
+            cmp-path
+            cmp-cmdline
+            nvim-cmp
+            cmp-vsnip
+            vim-vsnip
+            cmp-tmux
           ];
         };
       };
