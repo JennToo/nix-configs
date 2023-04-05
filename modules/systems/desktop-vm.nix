@@ -7,6 +7,9 @@
       ../features/common.nix
       ../features/gui-common.nix
       ../features/gnome-desktop.nix
+      ../features/ssh-server.nix
+      ../features/bash-developer.nix
+      ../features/python-developer.nix
     ];
 
   boot.loader.grub.enable = true;
@@ -21,7 +24,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
   };
 
-  services.openssh.enable = true;
 
   system.stateVersion = "22.11";
 }

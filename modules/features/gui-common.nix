@@ -1,7 +1,16 @@
 { config, pkgs, ... }:
 { 
   environment.systemPackages = with pkgs; [
+    cascadia-code
+    inkscape
+    keepass
+    meld
+    noto-fonts-emoji
+    obs-studio
     qalculate-gtk
+    sitelen-seli-kiwen
+    source-code-pro
+    wireshark
   ];
 
   services.xserver.enable = true;
