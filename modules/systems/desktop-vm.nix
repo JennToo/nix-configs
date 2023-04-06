@@ -10,6 +10,7 @@
       ../features/ssh-server.nix
       ../features/bash-developer.nix
       ../features/python-developer.nix
+      ../features/music.nix
     ];
 
   boot.loader.grub.enable = true;
