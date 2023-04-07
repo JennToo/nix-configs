@@ -14,13 +14,22 @@
       system = "x86_64-linux";
       modules = [
         inputs.musnix.nixosModules.musnix
-        ./modules/systems/desktop-vm.nix
         inputs.home-manager.nixosModules.home-manager
         {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.jwilcox = import ./home.nix;
+          boot.loader.grub.enable = true;
+          boot.loader.grub.device = "/dev/vda";
+          boot.loader.grub.useOSProber = true;
+          networking.hostName = "nixos";
         }
+
+        ./modules/hardware-configurations/desktop-vm.nix
+        ./modules/features/common.nix
+        ./modules/features/gui-common.nix
+        ./modules/features/gnome-desktop.nix
+        ./modules/features/ssh-server.nix
+        ./modules/features/bash-developer.nix
+        ./modules/features/python-developer.nix
+        ./modules/features/music.nix
       ];
       specialArgs = { inherit inputs; };
     };

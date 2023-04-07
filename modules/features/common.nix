@@ -38,4 +38,15 @@
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
+
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  users.users.jwilcox = {
+    isNormalUser = true;
+    description = "Jennifer";
+    extraGroups = [ "networkmanager" "wheel" ];
+  };
+  home-manager.users.jwilcox = import ../../home.nix;
+
+  system.stateVersion = "22.11";
 }
