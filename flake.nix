@@ -52,6 +52,12 @@
             fsType = "ext4";
             options = [ "nofail" ];
           };
+
+          environment.etc = {
+            "wireplumber/main.lua.d/51-alsa-disable.lua".text =
+              builtins.readFile dotfiles/wireplumber-venezuela-main.lua;
+          };
+          services.pipewire.wireplumber.enable = true;
         }
 
         ./modules/hardware-configurations/venezuela.nix

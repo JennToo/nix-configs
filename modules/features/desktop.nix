@@ -30,6 +30,8 @@
   environment.systemPackages = with pkgs; [
     firefox
     gnomeExtensions.appindicator
+    pavucontrol
+    xfce.xfce4-pulseaudio-plugin
     xfce.xfce4-whiskermenu-plugin
   ];
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
