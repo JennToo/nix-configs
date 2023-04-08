@@ -21,4 +21,9 @@
   environment.systemPackages = with pkgs; [
     firefox
   ];
+  users.users.jwilcox = {
+    packages = with pkgs; [
+      discord
+    ];
+  };
 }
