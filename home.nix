@@ -1,11 +1,10 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
   home.username = "jwilcox";
   home.homeDirectory = "/home/jwilcox";
   home.stateVersion = "22.11";
   programs.home-manager.enable = true;
 
-  services.gpg-agent = {                          
+  services.gpg-agent = {
     enable = true;
     defaultCacheTtl = 1800;
     enableSshSupport = true;

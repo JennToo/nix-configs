@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{
+{ config, pkgs, ... }: {
   programs.tmux = {
     enable = true;
     escapeTime = 1;

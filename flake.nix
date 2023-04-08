@@ -10,6 +10,8 @@
   };
 
   outputs = inputs: {
+    formatter.x86_64-linux = inputs.nixpkgs.legacyPackages.x86_64-linux.nixfmt;
+
     nixosConfigurations.desktop-vm = inputs.nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -48,6 +50,7 @@
           fileSystems."/mnt/bigdata-local" = {
             device = "/dev/disk/by-uuid/a4a04330-a8e3-48b8-b706-4a35637c94ac";
             fsType = "ext4";
+            options = [ "nofail" ];
           };
         }
 

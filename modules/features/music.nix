@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{ 
+{ config, pkgs, ... }: {
   musnix.enable = true;
   environment.systemPackages = with pkgs; [
     ardour

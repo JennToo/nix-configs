@@ -1,5 +1,4 @@
-{ config, pkgs, ... }:
-{ 
+{ config, pkgs, ... }: {
   networking.networkmanager.enable = true;
 
   services.xserver.displayManager.gdm.enable = true;
@@ -18,12 +17,6 @@
     jack.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    firefox
-  ];
-  users.users.jwilcox = {
-    packages = with pkgs; [
-      discord
-    ];
-  };
+  environment.systemPackages = with pkgs; [ firefox ];
+  users.users.jwilcox = { packages = with pkgs; [ discord ]; };
 }

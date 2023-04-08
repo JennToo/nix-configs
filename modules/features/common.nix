@@ -1,9 +1,5 @@
-{ config, pkgs, ... }:
-{ 
-  imports = [
-    ../programs/tmux.nix
-    ../programs/neovim.nix
-  ];
+{ config, pkgs, ... }: {
+  imports = [ ../programs/tmux.nix ../programs/neovim.nix ];
 
   environment.systemPackages = with pkgs; [
     curl
@@ -11,8 +7,10 @@
     fd
     fzf
     git
+    gnumake
     htop
     libqalculate
+    nixfmt
     pstree
     ripgrep
     tree
