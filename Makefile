@@ -7,3 +7,6 @@ switch:
 
 format:
 	find -name '*.nix' -exec nixfmt '{}' ';'
+
+update:
+	nix flake update --commit-lock-file
