@@ -70,6 +70,7 @@
         ./modules/features/music.nix
         ./modules/features/no-sleep.nix
         ./modules/features/home-samba-mount.nix
+        ./modules/programs/renoise.nix
       ];
       specialArgs = { inherit inputs; };
     };
