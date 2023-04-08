@@ -69,6 +69,7 @@
         ./modules/features/python-developer.nix
         ./modules/features/music.nix
         ./modules/features/no-sleep.nix
+        ./modules/features/home-samba-mount.nix
       ];
       specialArgs = { inherit inputs; };
     };
