@@ -40,10 +40,15 @@
         inputs.musnix.nixosModules.musnix
         inputs.home-manager.nixosModules.home-manager
         {
-	  boot.loader.systemd-boot.enable = true;
-	  boot.loader.efi.canTouchEfiVariables = true;
-	  boot.loader.efi.efiSysMountPoint = "/boot/efi";
+          boot.loader.systemd-boot.enable = true;
+          boot.loader.efi.canTouchEfiVariables = true;
+          boot.loader.efi.efiSysMountPoint = "/boot/efi";
           networking.hostName = "venezuela";
+
+          fileSystems."/mnt/bigdata-local" = {
+            device = "/dev/disk/by-uuid/a4a04330-a8e3-48b8-b706-4a35637c94ac";
+            fsType = "ext4";
+          };
         }
 
         ./modules/hardware-configurations/venezuela.nix
