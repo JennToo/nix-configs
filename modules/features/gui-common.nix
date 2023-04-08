@@ -10,6 +10,7 @@
     sitelen-seli-kiwen
     source-code-pro
     wireshark
+    xclip
   ];
 
   services.xserver.enable = true;
