@@ -38,4 +38,9 @@
     enable = true;
     bashrcExtra = builtins.readFile ./dotfiles/bashrc;
   };
+
+  home.file.".invoke.yaml".text = ''
+    run:
+      shell: /run/current-system/sw/bin/bash
+  '';
 }
