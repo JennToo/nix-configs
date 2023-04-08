@@ -33,9 +33,15 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-  '';
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "weekly";
+    };
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
