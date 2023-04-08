@@ -68,6 +68,7 @@
         ./modules/features/bash-developer.nix
         ./modules/features/python-developer.nix
         ./modules/features/music.nix
+        ./modules/features/no-sleep.nix
       ];
       specialArgs = { inherit inputs; };
     };
