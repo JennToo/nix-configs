@@ -27,7 +27,7 @@
         ./modules/hardware-configurations/desktop-vm.nix
         ./modules/features/common.nix
         ./modules/features/gui-common.nix
-        ./modules/features/gnome-desktop.nix
+        ./modules/features/desktop.nix
         ./modules/features/ssh-server.nix
         ./modules/features/bash-developer.nix
         ./modules/features/python-developer.nix
@@ -57,7 +57,7 @@
         ./modules/hardware-configurations/venezuela.nix
         ./modules/features/common.nix
         ./modules/features/gui-common.nix
-        ./modules/features/gnome-desktop.nix
+        ./modules/features/desktop.nix
         ./modules/features/ssh-server.nix
         ./modules/features/bash-developer.nix
         ./modules/features/python-developer.nix

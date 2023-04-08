@@ -1,8 +1,17 @@
 { config, pkgs, ... }: {
   networking.networkmanager.enable = true;
 
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  services.xserver = {
+    enable = true;
+    desktopManager = {
+      xfce.enable = true;
+      gnome.enable = true;
+    };
+    displayManager = {
+      gdm.enable = true;
+      defaultSession = "xfce";
+    };
+  };
   programs.xwayland.enable = true;
 
   services.printing.enable = true;
@@ -21,6 +30,7 @@
   environment.systemPackages = with pkgs; [
     firefox
     gnomeExtensions.appindicator
+    xfce.xfce4-whiskermenu-plugin
   ];
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
   users.users.jwilcox = { packages = with pkgs; [ discord spotify ]; };
