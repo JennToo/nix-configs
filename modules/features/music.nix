@@ -6,6 +6,7 @@
     cardinal
     carla
     dexed
+    geonkick
     surge-XT
   ];
   users.users.jwilcox.extraGroups = [ "audio" ];
