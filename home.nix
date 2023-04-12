@@ -43,4 +43,6 @@
     run:
       shell: /run/current-system/sw/bin/bash
   '';
+
+  dconf.settings."org/gnome/desktop/wm/preferences".button-layout = "minimize,maximize,close";
 }
