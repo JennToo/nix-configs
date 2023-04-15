@@ -6,6 +6,7 @@
     cardinal
     carla
     dexed
+    fluidsynth
     geonkick
     surge-XT
   ];

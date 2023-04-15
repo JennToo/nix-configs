@@ -30,6 +30,7 @@
   environment.systemPackages = with pkgs; [
     firefox
     gnomeExtensions.appindicator
+    hplip
     megasync
     pavucontrol
     xfce.xfce4-pulseaudio-plugin

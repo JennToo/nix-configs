@@ -11,6 +11,7 @@
     htop
     libqalculate
     nixfmt
+    p7zip
     pstree
     ripgrep
     tree
