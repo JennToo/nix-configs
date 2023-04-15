@@ -74,5 +74,28 @@
       ];
       specialArgs = { inherit inputs; };
     };
+
+    nixosConfigurations.puertorico = inputs.nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        inputs.home-manager.nixosModules.home-manager
+        {
+          boot.loader.systemd-boot.enable = true;
+          boot.loader.efi.canTouchEfiVariables = true;
+          boot.loader.efi.efiSysMountPoint = "/boot/efi";
+          boot.kernelPackages = inputs.nixpkgs.legacyPackages.x86_64-linux.linuxPackages_6_2;
+          boot.loader.grub.useOSProber = true;
+          networking.hostName = "puertorico";
+        }
+
+        ./modules/hardware-configurations/puertorico.nix
+        ./modules/features/common.nix
+        ./modules/features/gui-common.nix
+        ./modules/features/desktop.nix
+        ./modules/features/bash-developer.nix
+        ./modules/features/python-developer.nix
+      ];
+      specialArgs = { inherit inputs; };
+    };
   };
 }

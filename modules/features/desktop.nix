@@ -9,7 +9,6 @@
     };
     displayManager = {
       gdm.enable = true;
-      defaultSession = "xfce";
     };
   };
   programs.xwayland.enable = true;
