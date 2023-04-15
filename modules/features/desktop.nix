@@ -28,6 +28,7 @@
 
   environment.systemPackages = with pkgs; [
     firefox
+    gnome.dconf-editor
     gnomeExtensions.appindicator
     hplip
     megasync

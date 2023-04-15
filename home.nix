@@ -44,5 +44,10 @@
       shell: /run/current-system/sw/bin/bash
   '';
 
-  dconf.settings."org/gnome/desktop/wm/preferences".button-layout = "minimize,maximize,close";
+  dconf.settings = {
+    "org/gnome/desktop/wm/preferences".button-layout = "minimize,maximize,close";
+    "org/gnome/shell".enabled-extensions = ["appindicatorsupport@rgcjonas.gmail.com"];
+    "org/gnome/shell".disabled-extensions = [];
+    "org/gnome/Console".theme = "day";
+  };
 }
