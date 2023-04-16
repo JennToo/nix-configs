@@ -45,9 +45,17 @@
   '';
 
   dconf.settings = {
-    "org/gnome/desktop/wm/preferences".button-layout = "minimize,maximize,close";
-    "org/gnome/shell".enabled-extensions = ["appindicatorsupport@rgcjonas.gmail.com"];
-    "org/gnome/shell".disabled-extensions = [];
+    "org/gnome/desktop/wm/preferences".button-layout =
+      "minimize,maximize,close";
+    "org/gnome/shell".enabled-extensions =
+      [ "appindicatorsupport@rgcjonas.gmail.com" ];
+    "org/gnome/shell".disabled-extensions = [ ];
+    "org/gnome/shell".favorite-apps = [
+      "firefox.desktop"
+      "org.gnome.Nautilus.desktop"
+      "org.gnome.Console.desktop"
+      "discord.desktop"
+    ];
     "org/gnome/Console".theme = "day";
   };
 }

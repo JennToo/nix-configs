@@ -83,7 +83,8 @@
           boot.loader.systemd-boot.enable = true;
           boot.loader.efi.canTouchEfiVariables = true;
           boot.loader.efi.efiSysMountPoint = "/boot/efi";
-          boot.kernelPackages = inputs.nixpkgs.legacyPackages.x86_64-linux.linuxPackages_6_2;
+          boot.kernelPackages =
+            inputs.nixpkgs.legacyPackages.x86_64-linux.linuxPackages_6_2;
           boot.loader.grub.useOSProber = true;
           networking.hostName = "puertorico";
         }

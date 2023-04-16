@@ -7,9 +7,7 @@
       xfce.enable = true;
       gnome.enable = true;
     };
-    displayManager = {
-      gdm.enable = true;
-    };
+    displayManager = { gdm.enable = true; };
   };
   programs.xwayland.enable = true;
 
@@ -33,6 +31,7 @@
     hplip
     megasync
     pavucontrol
+    pinta
     xfce.xfce4-pulseaudio-plugin
     xfce.xfce4-whiskermenu-plugin
   ];
