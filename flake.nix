@@ -46,6 +46,8 @@
           boot.loader.efi.canTouchEfiVariables = true;
           boot.loader.efi.efiSysMountPoint = "/boot/efi";
           networking.hostName = "venezuela";
+          boot.kernelPackages =
+            inputs.nixpkgs.legacyPackages.x86_64-linux.linuxPackages_6_2;
 
           fileSystems."/mnt/bigdata-local" = {
             device = "/dev/disk/by-uuid/a4a04330-a8e3-48b8-b706-4a35637c94ac";
