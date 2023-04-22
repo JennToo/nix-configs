@@ -29,6 +29,7 @@
     gnome.dconf-editor
     gnomeExtensions.appindicator
     hplip
+    libreoffice
     megasync
     pavucontrol
     pinta
