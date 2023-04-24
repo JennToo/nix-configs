@@ -25,6 +25,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    corefonts
     firefox
     gnome.dconf-editor
     gnomeExtensions.appindicator
