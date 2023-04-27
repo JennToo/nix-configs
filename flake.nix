@@ -100,5 +100,27 @@
       ];
       specialArgs = { inherit inputs; };
     };
+
+    nixosConfigurations.workvm = inputs.nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        inputs.home-manager.nixosModules.home-manager
+        {
+          boot.loader.systemd-boot.enable = true;
+          boot.loader.efi.canTouchEfiVariables = true;
+          boot.loader.efi.efiSysMountPoint = "/boot/efi";
+          networking.hostName = "workvm";
+        }
+
+        ./modules/hardware-configurations/workvm.nix
+        ./modules/features/common.nix
+        ./modules/features/gui-common.nix
+        ./modules/features/desktop.nix
+        ./modules/features/ssh-server.nix
+        ./modules/features/bash-developer.nix
+        ./modules/features/python-developer.nix
+      ];
+      specialArgs = { inherit inputs; };
+    };
   };
 }
