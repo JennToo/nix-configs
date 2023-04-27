@@ -119,6 +119,7 @@
         ./modules/features/ssh-server.nix
         ./modules/features/bash-developer.nix
         ./modules/features/python-developer.nix
+        ./modules/features/hyperv-enhanced-sessions.nix
       ];
       specialArgs = { inherit inputs; };
     };
