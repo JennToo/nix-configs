@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
   environment.systemPackages = [ pkgs.cifs-utils ];
   fileSystems."/mnt/bigdata-remote" = {
     device = "//argentina3.home.nitori.org/bigdata";

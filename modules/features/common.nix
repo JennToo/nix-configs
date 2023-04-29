@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
   imports = [ ../programs/tmux.nix ../programs/neovim.nix ];
 
   environment.systemPackages = with pkgs; [
