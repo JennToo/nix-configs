@@ -40,6 +40,7 @@
         ./modules/features/common.nix
         ./modules/features/gui-common.nix
         ./modules/features/desktop.nix
+        ./modules/features/games.nix
         ./modules/features/ssh-server.nix
         ./modules/features/bash-developer.nix
         ./modules/features/python-developer.nix

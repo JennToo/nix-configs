@@ -1,3 +1,1 @@
-{ pkgs, ... }: {
-  environment.systemPackages = with pkgs; [ shellcheck ];
-}
+{ pkgs, ... }: { environment.systemPackages = with pkgs; [ shellcheck ]; }

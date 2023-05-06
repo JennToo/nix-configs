@@ -5,6 +5,7 @@
     curl
     difftastic
     fd
+    file
     fzf
     git
     gnumake

@@ -33,9 +33,11 @@
     libreoffice
     megasync
     pavucontrol
+    prusa-slicer
     pinta
     xfce.xfce4-pulseaudio-plugin
     xfce.xfce4-whiskermenu-plugin
+    zoom-us
   ];
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
   users.users.jwilcox = { packages = with pkgs; [ discord spotify ]; };

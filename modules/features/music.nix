@@ -8,6 +8,7 @@
     dexed
     fluidsynth
     geonkick
+    musescore
     surge-XT
   ];
   users.users.jwilcox.extraGroups = [ "audio" ];
