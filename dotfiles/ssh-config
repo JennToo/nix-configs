@@ -1,0 +1,21 @@
+Include /home/jwilcox/.ssh/config.d/*.conf
+Host home.nitori.org
+    Port 28
+    User jwilcox
+    ForwardAgent yes
+    ForwardX11 yes
+Host jenntoo.test.adtran.com
+    Port 22
+    User jwilcox
+    ForwardAgent yes
+    ForwardX11 yes
+Host simserver6.cable.adtran.com
+    Port 22
+    User ubuntu
+    ForwardAgent yes
+    ForwardX11 yes
+Host simserver7.cable.adtran.com
+    Port 22
+    User ubuntu
+    ForwardAgent yes
+    ForwardX11 yes

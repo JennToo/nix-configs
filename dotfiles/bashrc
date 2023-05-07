@@ -56,4 +56,4 @@ export OS_CLOUD=openstack
 export VISUAL="nvim"
 export EDITOR="nvim"
 
-export FZF_DEFAULT_COMMAND="fd --type f -I --ignore-file $HOME/.fdignore"
+export FZF_DEFAULT_COMMAND="fd --type f -I --ignore-file $HOME/.config/fdignore"

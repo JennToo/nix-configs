@@ -10,6 +10,7 @@
     enableSshSupport = true;
   };
 
+  programs.command-not-found.enable = true;
   programs.git = {
     enable = true;
     userName = "Jennifer Wilcox";
@@ -33,7 +34,6 @@
       pull.rebase = "false";
     };
   };
-
   programs.bash = {
     enable = true;
     bashrcExtra = builtins.readFile ./dotfiles/bashrc;
@@ -43,6 +43,10 @@
     run:
       shell: /run/current-system/sw/bin/bash
   '';
+
+  home.file.".ssh/config".source = ./dotfiles/ssh-config;
+  home.file.".config/fdignore".source = ./dotfiles/fdignore;
+  home.file.".config/alacritty/alacritty.yml".source = ./dotfiles/alacritty.yml;
 
   dconf.settings = {
     "org/gnome/desktop/wm/preferences".button-layout =

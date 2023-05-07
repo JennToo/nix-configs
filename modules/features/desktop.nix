@@ -25,6 +25,7 @@
   };
 
   environment.systemPackages = with pkgs; [
+    alacritty
     corefonts
     firefox
     gnome.dconf-editor
