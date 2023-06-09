@@ -10,6 +10,7 @@
     git
     gnumake
     htop
+    killall
     libqalculate
     nixfmt
     p7zip

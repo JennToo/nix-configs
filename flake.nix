@@ -1,10 +1,10 @@
 {
   description = "Jennifer's NixOS configurations";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
     musnix.url = "github:musnix/musnix";
     home-manager = {
-      url = "github:nix-community/home-manager/release-22.11";
+      url = "github:nix-community/home-manager/release-23.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -20,7 +20,7 @@
         {
           networking.hostName = "venezuela";
           boot.kernelPackages =
-            inputs.nixpkgs.legacyPackages.x86_64-linux.linuxPackages_6_2;
+            inputs.nixpkgs.legacyPackages.x86_64-linux.linuxPackages_6_3;
 
           fileSystems."/mnt/bigdata-local" = {
             device = "/dev/disk/by-uuid/a4a04330-a8e3-48b8-b706-4a35637c94ac";

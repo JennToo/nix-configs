@@ -28,6 +28,7 @@
     alacritty
     corefonts
     firefox
+    freecad
     gnome.dconf-editor
     gnomeExtensions.appindicator
     hplip
