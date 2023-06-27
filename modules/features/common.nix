@@ -57,4 +57,6 @@
   home-manager.users.jwilcox = import ../../home.nix;
 
   system.stateVersion = "22.11";
+
+  services.fwupd.enable = true;
 }
