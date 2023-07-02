@@ -12,6 +12,7 @@
     htop
     killall
     libqalculate
+    lsb-release
     nixfmt
     p7zip
     pstree
